@@ -26,12 +26,12 @@ export default function Home() {
       >
         <Layout className="!pt-0 md:!pt-16 sm:!pt-16">
           <div className="flex w-full items-start justify-between md:flex-col">
-            <div className="w-1/2 lg:hidden md:inline-block md:w-full  items-center md:items-center">
+            <div className="w-1/2  lg:w-full  lg:items-center md:inline-block items-center  md:w-full  md:items-center">
               <Image
                 src={profilePic}
                 alt="Sourabh Kulkarni"
                 // className="h-auto w-full"
-                className="h-1/2 w-1/2 md:mx-40 rounded-3xl border-2 border-solid border-dark mx-20"
+                className="h-1/2 w-1/2 md:mx-20 md:my-10 rounded-3xl border-2 border-solid border-dark mx-20"
                 sizes="100vw"
                 priority
               />
@@ -42,7 +42,7 @@ export default function Home() {
                 text="Hi there, I'm Sourabh !!"
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
-              <p className="my-4 text-base font-medium md:text-sm sm:!text-xs">
+              <p className="my-4 text-base font-medium text-justify md:text-sm sm:!text-xs">
                 As a skilled <strong>Software Developer</strong> and <strong>ML Enthusiast</strong>, I am dedicated to turning ideas into innovative applications.
   Explore my latest projects, showcasing my expertise in Web Development and Machine Learning field.
               </p>

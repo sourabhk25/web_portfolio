@@ -34,7 +34,7 @@ const FeaturedProject = ({ title, summary, img, link, github, technologies = [] 
       >
         <FramerImage
           src={img}
-          className="h-auto w-full border-solid border-dark dark:border-solid dark:border-light"
+          className="h-auto w-full border-2 rounded-2xl border-solid border-dark dark:border-light"
           alt={title}
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.2 }}
@@ -67,7 +67,7 @@ const FeaturedProject = ({ title, summary, img, link, github, technologies = [] 
             className="mt-4 inline-flex items-center rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
             aria-label={`${title} GitHub link`}
           >
-            <GithubIcon className="w-5 h-5 mr-2"/>
+            <GithubIcon className="w-4 h-4 mr-2"/>
             <span className="ml-2">View Code</span>
           </Link>
         </div>
@@ -101,7 +101,7 @@ const Project = ({ title, img, link, github, summary, technologies = [] }) => {
           <Image
             src={img}
             alt={title}
-            className="h-auto w-full"
+            className="h-auto w-full border-2 rounded-2xl border-solid border-dark dark:border-light"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </motion.div>
@@ -130,7 +130,7 @@ const Project = ({ title, img, link, github, summary, technologies = [] }) => {
             className="mt-4 inline-flex items-center rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
             aria-label={`${title} GitHub link`}
           >
-            <GithubIcon className="w-5 h-5 mr-2"/>
+            <GithubIcon className="w-4 h-4 mr-2"/>
             <span className="ml-2">View Code</span>
           </Link>
         </div>
@@ -157,7 +157,7 @@ export default function Projects() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Code & Learn!!"
+            text="My Work"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">

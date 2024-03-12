@@ -1,7 +1,6 @@
 import Layout from "@/components/Layout";
 import Head from "next/head";
 import Image from "next/image";
-import profile from "../../public/images/profile/developer-pic-2.jpg";
 import profilePic from "../../public/images/profile/formal_pic_cropped.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 import { useEffect, useRef } from "react";
@@ -82,14 +81,14 @@ export default function About() {
             </div>
             <div className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
             bg-light p-8 dark:border-light dark:bg-dark
-            xl:col-span-4 md:col-span-8 md:order-1 md:w-1/2 md:h-auto md:mx-40
+            xl:col-span-4 md:col-span-8 md:order-1 md:w-1/2 md:h-auto md:mx-20
             ">
               <div
                 className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%]  rounded-[2rem] rounded-br-3xl 
                 bg-dark dark:bg-light  "
               />
               <Image
-                className="h-auto w-full rounded-2xl border-2 border-solid border-dark dark:border-light"
+                className="h-auto w-full rounded-2xl border-2 border-solid border-dark dark:border-light "
                 src = {profilePic}
                 alt="Sourabh Kulkarni"
                 sizes="(max-width: 768px) 100vw,
