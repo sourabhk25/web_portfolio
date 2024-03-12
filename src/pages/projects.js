@@ -67,7 +67,7 @@ const FeaturedProject = ({ title, summary, img, link, github, technologies = [] 
             className="mt-4 inline-flex items-center rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
             aria-label={`${title} GitHub link`}
           >
-            <GithubIcon className="w-4 h-4 mr-2"/>
+            <GithubIcon className="h-5 !w-6 md:!w-4 mr-2"/>
             <span className="ml-2">View Code</span>
           </Link>
         </div>
@@ -130,7 +130,7 @@ const Project = ({ title, img, link, github, summary, technologies = [] }) => {
             className="mt-4 inline-flex items-center rounded-lg bg-dark p-2 px-6 text-lg font-semibold text-light dark:bg-light dark:text-dark sm:px-4 sm:text-base"
             aria-label={`${title} GitHub link`}
           >
-            <GithubIcon className="w-4 h-4 mr-2"/>
+            <GithubIcon className="h-5 !w-6 md:!w-4 mr-2"/>
             <span className="ml-2">View Code</span>
           </Link>
         </div>
