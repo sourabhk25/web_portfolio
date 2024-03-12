@@ -3,12 +3,13 @@ import Head from "next/head";
 import Image from "next/image";
 import profilePic from "../../public/images/profile/formal_pic_cropped.jpg";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
+
 
 function AnimatedNumberFramerMotion({ value }) {
   const ref = useRef(null);
@@ -35,6 +36,25 @@ function AnimatedNumberFramerMotion({ value }) {
 }
 
 export default function About() {
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+  useEffect(() => {
+    const checkScrollTop = () => {
+      if (!showScrollToTop && window.pageYOffset > 400){
+        setShowScrollToTop(true);
+      } else if (showScrollToTop && window.pageYOffset <= 400){
+        setShowScrollToTop(false);
+      }
+    };
+  
+    window.addEventListener('scroll', checkScrollTop);
+    return () => window.removeEventListener('scroll', checkScrollTop);
+  }, [showScrollToTop]);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       <Head>
@@ -127,6 +147,11 @@ export default function About() {
           <Experience />
           <Education />
         </Layout>
+        {showScrollToTop &&
+          <button onClick={scrollToTop} className="fixed bottom-5 right-5 z-50 p-3 rounded-full bg-light dark:bg-dark border-2 border-dark dark:border-light shadow-md text-dark dark:text-light cursor-pointer hover:bg-opacity-90 focus:outline-none">
+            ↑
+          </button>
+        }
       </main>
     </>
   );

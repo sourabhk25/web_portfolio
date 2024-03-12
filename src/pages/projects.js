@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import proj1 from "../../public/images/projects/sereneStyles.png";
 import proj2 from "../../public/images/projects/echoVisuals.png";
 import proj3 from "../../public/images/projects/mrVoicePay.png";
@@ -140,6 +141,25 @@ const Project = ({ title, img, link, github, summary, technologies = [] }) => {
 };
 
 export default function Projects() {
+  const [showScrollToTop, setShowScrollToTop] = useState(false);
+
+  useEffect(() => {
+    const checkScrollTop = () => {
+      if (!showScrollToTop && window.pageYOffset > 400) {
+        setShowScrollToTop(true);
+      } else if (showScrollToTop && window.pageYOffset <= 400) {
+        setShowScrollToTop(false);
+      }
+    };
+
+    window.addEventListener('scroll', checkScrollTop);
+    return () => window.removeEventListener('scroll', checkScrollTop);
+  }, [showScrollToTop]);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <>
       <Head>
@@ -240,6 +260,11 @@ export default function Projects() {
             </div>
           </div>
         </Layout>
+        {showScrollToTop &&
+          <button onClick={scrollToTop} className="fixed bottom-5 right-5 z-50 p-3 rounded-full bg-light dark:bg-dark shadow-md cursor-pointer hover:bg-opacity-90 focus:outline-none border-2 border-dark dark:border-light">
+            <span className="text-dark dark:text-light">↑</span>
+          </button>
+        }
       </main>
     </>
   );
