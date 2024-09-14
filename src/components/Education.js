@@ -83,7 +83,7 @@ const Education = () => {
 
           <Details
             type="Master of Science in Computer Science"
-            time="Aug 2022 - May 2024"
+            time="Aug 2022 - Aug 2024"
             place="California State University, Chico"
             cgpa="3.91 / 4.0"
             info="Working on a Master's research project which extracts content from research papers related to Live coding technique in education

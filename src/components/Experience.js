@@ -64,26 +64,49 @@ const Experience = () => {
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
             <Details
+              position="Software Engineer Intern"
+              company="InnovateMore Inc."
+              companyLink="N/A"
+              time="Aug 2024 - Present"
+              address="San Antonio, TX"
+              work="Collaborated on integrating AWS Cognito with a Spring Boot application, focusing on setting up user authentication and authorization 
+              flows using REST API calls to support secure user management.; Created comprehensive technical documentation for setting up 
+              PostgreSQL databases, running Maven builds, and deploying Spring Boot applications, enhancing onboarding efficiency for new team members."
+            />
+
+            <Details
+              position="Software Engineer Intern"
+              company="Parma CRM Inc."
+              companyLink="https://www.parma.ai/"
+              time="Jul 2024 - Aug 2024"
+              address="Sunnyvale, CA"
+              work="Designed and implemented a Ruby-based API integration for fetching and processing notes from Parma CRM and HubSpot, 
+              optimizing the data retrieval process by 40%, which improved efficiency in generating CSV reports.; Automated the end-to-end workflow 
+              for note data extraction and CSV generation using GitHub Actions and Ruby scripts, reducing manual effort by 60% and ensuring consistent 
+              data availability for stakeholders."
+            />
+
+            {/* <Details
               position="Computer Science Tutor"
               company="CSU Chico"
               companyLink="https://www.csuchico.edu/csci/"
-              time="Jan 2024- Present"
+              time="Jan 2024 - May 2024"
               address="Chico, CA"
-              work="Provide tutoring for various computer science courses, including programming, algorithms, data structures,
+              work="Provided tutoring for various computer science courses, including programming, algorithms, data structures,
               computer vision, databases, and computer security, with a focus on communication and personalized instruction."
-            />
+            /> */}
 
             <Details
               position="Research Assistant"
               company="CSU Chico"
               companyLink="https://www.csuchico.edu/csci/"
-              time="Aug 2023- Feb 2024"
+              time="Aug 2023 - Feb 2024"
               address="Chico, CA"
               work="Assisted Dr. Abbas Attarwala with research on the 'Impacts of AI on children', involving an extensive literature review of 60 papers covering
               topics like bias, mental health, AI-generated content, fake data, and parental controls."
             />
 
-            <Details
+            {/* <Details
               position="Computer Science Grader"
               company="CSU Chico"
               companyLink="https://www.csuchico.edu/csci/"
@@ -91,13 +114,13 @@ const Experience = () => {
               address="Chico, CA"
               work="Assigned grades for coursework and quizzes in courses like 'Programming and algorithms', 'Algorithms and
               Data structures' at California State University, Chico."
-            />
+            /> */}
 
             <Details
               position="Senior Software Engineer"
               company="HSBC"
               companyLink="https://www.hsbc.com/careers/where-we-hire/india/technology"
-              time="Mar 2022- Jul 2022"
+              time="Mar 2022 - Jul 2022"
               address="Pune, India"
               work="Developed and optimized data migration solutions, reducing execution time by 120% through REST APIs for
                Hadoop to PostgreSQL and Hadoop to Oracle, and utilized on-premises VMs for deployment.;
