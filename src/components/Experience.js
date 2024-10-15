@@ -78,7 +78,7 @@ const Experience = () => {
             style={{ scaleY: scrollYProgress }}
           />
           <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
-            <Details
+            {/* <Details
               position="Software Engineer Intern"
               company="InnovateMore Inc."
               companyLink="N/A"
@@ -87,7 +87,7 @@ const Experience = () => {
               work="Collaborated on integrating AWS Cognito with a Spring Boot application, focusing on setting up user authentication and authorization 
               flows using REST API calls to support secure user management.; Created comprehensive technical documentation for setting up 
               PostgreSQL databases, running Maven builds, and deploying Spring Boot applications, enhancing onboarding efficiency for new team members."
-            />
+            /> */}
 
             <Details
               position="Software Engineer Intern"
